@@ -1,24 +1,31 @@
-import { Component } from '@angular/core';
-import { Store } from '@ngrx/store';
+import { Component, OnInit } from '@angular/core';
+import { select, Store } from '@ngrx/store';
 import { selectCoffees } from './state/coffees.selectors';
 import { coffeeService } from './coffee-list/coffees.service';
 import { Observable } from 'rxjs';
 import { Coffee } from './coffee-list/coffees.model';
+import { __values } from 'tslib';
+import { state } from '@angular/animations';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
 })
-export class AppComponent {
+
+export class AppComponent implements OnInit{
   title = 'IBM_angular_project';
 
-  coffees$ = this.store.select(selectCoffees);
-  exp: Observable<Coffee>;
   constructor(
     private coffeesService: coffeeService,
     private store: Store,
-  ) {
-  }
+  ) {}
+
+  coffeeList = undefined;
+  coffeeSubscription = this.store.subscribe(
+    (state) => {
+      this.coffeeList=state;
+    }
+  )
 
   ngOnInit() {
     this.store.dispatch({ type: '[Coffee List/API] Retrieve Coffees Success' });

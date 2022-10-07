@@ -1,6 +1,16 @@
 <h1>Coffee Collection</h1>
 
- <app-coffee-list class="coffee-list" [coffees]="coffees$ |async"></app-coffee-list>
+<div *ngFor="let i of coffeeList | keyvalue" >
+    <div *ngFor="let j of i | keyvalue">
+        <div *ngFor="let k of j.value | keyvalue">
+            <div *ngFor="let l of k.value | keyvalue">
+                <div *ngFor="let m of l.value | keyvalue">
+                    <pre>{{m.key}}:{{m.value}}</pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- 
 Use of this source code is governed by an MIT-style license that
