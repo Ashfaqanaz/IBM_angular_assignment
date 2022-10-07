@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "IBM_angular_assignment": {
+    "IBM_angular_project": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ibm-angular-assignment",
+            "outputPath": "dist/IBM_angular_assingment",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -64,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "IBM_angular_assignment:build:production"
+              "browserTarget": "IBM_angular_project:build:production"
             },
             "development": {
-              "browserTarget": "IBM_angular_assignment:build:development"
+              "browserTarget": "IBM_angular_project:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -75,7 +75,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "IBM_angular_assignment:build"
+            "browserTarget": "IBM_angular_project:build"
           }
         },
         "test": {
