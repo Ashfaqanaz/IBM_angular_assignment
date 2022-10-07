@@ -1,7 +1,7 @@
 import { Coffee } from '../coffee-list/coffees.model';
 
 export interface AppState {
-  coffeest: Coffee[];
+  coffee_state: Coffee[];
 }
 
 

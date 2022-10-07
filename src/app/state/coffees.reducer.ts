@@ -5,13 +5,13 @@ import { LoadCoffeesSuccess } from './coffees.actions';
 import { AppState } from './app.state';
 
 export const initialState: AppState = {
-  coffeest: undefined
+  coffee_state: undefined
 };
 
 export const coffeesReducer = createReducer(
   initialState,
   on(retrievedCoffeeList, (state) => ({...state})),
-  on(LoadCoffeesSuccess, (state, result) => ({coffeest: result.coffees}))
+  on(LoadCoffeesSuccess, (state, result) => ({coffee_state: result.coffees}))
 );
 
 

@@ -3,7 +3,7 @@ import { Coffee } from '../coffee-list/coffees.model';
 import { AppState } from "./app.state";
 
 export const selectCoffees = createSelector(
-    (state: AppState) => state.coffeest,
+    (state: AppState) => state.coffee_state,
     (coffees: Array<Coffee>) => coffees
   );
 
