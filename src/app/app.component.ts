@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, Injectable, Injector, OnInit } from '@angular/core';
 import { select, Store } from '@ngrx/store';
 import { selectCoffees } from './state/coffees.selectors';
 import { coffeeService } from './coffee-list/coffees.service';
@@ -10,6 +10,7 @@ import { state } from '@angular/animations';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
 })
 
 export class AppComponent implements OnInit{

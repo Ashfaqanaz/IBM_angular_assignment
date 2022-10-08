@@ -1,0 +1,32 @@
+* {
+    font-family: sans-serif;
+}
+
+.h1 {
+    text-align: center;
+}
+
+.coffee {
+    background-color: rgb(227, 191, 136);
+    margin: 1%;
+    padding: 3%;
+    /* display: flex; */
+    /* flex-direction: column; */
+    border-radius: 3%;
+
+}
+
+.coffee:hover {
+    background-color: antiquewhite;
+}
+
+@media screen and (max-width: 540px) {
+    .view {
+        width: 540px;
+    }
+
+    .coffee {
+        font-size: 0.7em;
+    
+    }
+}
